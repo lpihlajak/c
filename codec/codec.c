@@ -1,3 +1,20 @@
+/* 
+Implement (using c standard library only) a codec that serializes and deserializes instances of this struct:
+struct {
+       struct {
+           char sync;
+           unsigned int crc;
+       } header;
+       char payload[20];
+}
+The serialized form of the object should be like this:
+<sync><crc><payload>
+For example, the struct instance
+{ 'S', 123, "geek of the week" }
+in serialized form looks like this:
+<S><123><geek of the week>
+*/
+ 
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
